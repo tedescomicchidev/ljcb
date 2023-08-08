@@ -7,10 +7,10 @@
 
 .container{
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(12,2,50,0.2),rgba(12,2,50,0.2));
+    min-height: 100vh;
+    background: linear-gradient(132deg, rgba(136, 67, 67, 0.7),rgba(33, 162, 78, 0.7));
     position: relative;
-    padding: 9 5%;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,4 +78,159 @@ nav ul li a{
         width: auto;
         height: 100%;
     }
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    margin: 100px auto 0;
+    perspective: 1000px;
+}
+
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    background: url(img/logo.jpg);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #fff;
+    color: #111;
+    padding: 20px 40px;
+    transform: rotateY(180deg);
+
+}
+
+.card-front h2{
+    font-weight: 500;
+}
+
+.card-front p{
+    font-size: 14px;
+    color: #fff;
+}
+
+.card-front button{
+    width: 120px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.card-back h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
+
+.card-back h1 span{
+    font-weight: 400;    
+}
+
+.card-back p{
+    font-size: 14px;
+}
+
+.card-back p span{
+    font-weight: 600;
+}
+
+.card-back img{
+    width: 120px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.col{
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+}
+
+.col h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.col::after{
+    content: '';
+    width: 1px;
+    height: 80%;
+    background: #7800ad;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    
+}
+
+.col::last-child::after{
+    display: none;
+}
+
+.col p{
+    margin-top: 5px;
+}
+
+.card-back button{
+    background: #7800ad;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-right: 15px;
+    box-shadow: 0 8px 10px rgba(120, 0, 172, 0.2);
+}
+
+.card-back a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 px 10px 10px rgba(120, 0, 172, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.card-back a img{
+    width: 50%;
+}
+
+.card:hover .card-inner{
+    transform: rotateY(180deg);
 }
