@@ -103,7 +103,7 @@ nav ul li a{
     border-radius: 12px;
     background-size: cover;
     background-position: center;
-    background: url(img/logo.jpg);
+    background: url(../img/logo.png);
     padding: 60px 40px;
     display: flex;
     flex-direction: column;
